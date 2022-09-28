@@ -1,28 +1,45 @@
 addEventListener("DOMContentLoaded", ()=>{
-// Ejercicio 1
-// En una granja se requiere saber alguna información para determinar el precio de venta por cada kilo de huevo.
-// precio se determina a traves del promedio de calidad de las N gallinas que hay en la granja. 
-// La calidad de cada gallina se obtiene según la formula:
-// calidad = (peso de la gallina * altura de la gallina)/Numero de huevos que pone
+// Ejercicio 2
+// Hacer un algoritmo que al ingresar 2 números por la pantalla y se calcule la suma, resta, multiplicación
+// y división. El proceso debe terminar cuando se hallan realizado 10 procesos (Hacer uso de
+// contadores)
 
-let CantGall = 0, c = 0
+let c = 0
+let num = 0
 
-CantGall = Number(prompt("Ingrese el número de gallinas que hay en la granja: "));
-
-while(c<=CantGall ){
+while(num <= 9){
   c = c+1
-  let peso = Number(prompt("Ingrese el peso de la gallina [Kg]: "));
-  let altura = Number(prompt("Ingrese la altura de la gallina [cm]: "));
-  let CanHu = Number(prompt("Ingrese la cantidad de huevos: "));
+
+  let numero1 = Number(prompt("Ingrese el primer número: "))
+  let numero2 = Number(prompt("Ingrese el segundo número: "))
+
+  let suma = numero1 + numero2
+  let resta = numero1 - numero2
+  let multipliación = numero1 * numero2
+  let division = numero1 / numero2
+
+  num=num + 1
+
+
+  console.log (`proceso número "${c}"`);
   
-  let Calidad = (peso*altura)/CanHu
-  let precio = Calidad/CantGall
 
- 
-  console.group(`%cFormula (${peso} * ${altura}) / ${CanHu}`, `backgrounnd: rebeccapurple; color: antiquewhite; font-family: cursive; padding: 2px; border-radius: 1px solid #925fc4; border-radius: 5px;`);
+  console.log(`Suma: "${suma}"`);
 
-  console.log(`El precio de venta por el kilo de huevo de la gallina ${c} es: "${precio}"`);
-break
+// ------------------------------------------------------
+
+
+  console.log(`Resta: "${resta}"`);
+
+// ------------------------------------------------------
+
+  console.log(`Multiplicación: "${multipliación}"`);
+
+// -----------------------------------------------------
+
+  console.log(`División: "${division}"`);
+
+  console.log(`______________________`)
 
 }
 
